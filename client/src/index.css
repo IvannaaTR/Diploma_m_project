@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],input[type="password"],
+input[type="email"],input[type="number"],
+input[type="tel"],
+textarea{
+    @apply w-full border my-1 py-2 px-3 rounded-2xl;
+}
+textarea{
+    height: 140px;
+}
+button{
+    @apply bg-gray-300;
+}
+button.primary{
+    background-color: rgb(7, 122, 41);
+    @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
+button:disabled {
+  background-color: #b0b0b0; /* Сірий фон */
+  color: #6c6c6c; /* Сірий текст */
+  cursor: not-allowed; /* Заборонений курсор */
+  opacity: 0.6; /* Знижена непрозорість для більшої видимості */
+}
+.modal-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .map-container {
+    height: 100%; 
+    width: 100%; 
+  }
+ /* Затемнення заднього фону */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* напівпрозорий фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+  }
+  
+  /* Стилізація модального вікна */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
